@@ -100,4 +100,35 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# be able to use ctrl + backspace / crtl + delete to delete entire word
+bindkey '5~' kill-word
+bindkey '^H' backward-kill-word
+# be able to use ctrl + left / ctrl + right to move word by word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+
+export GIT_EDITOR="vim"
+
 export MAIL="msloot@student.42.fr"
+
+alias nor="norminette"
+
+alias clangW="clang -Wall -Werror -Wextra"
+
+alias gc="git commit --message"
+alias gst="git status --short"
+alias gtree="git log --graph --oneline --decorate"
+
+alias sl="ls"
+alias nj="just"
+alias mk="make"
+alias amke="make"
+alias mkae="make"
+alias maek="make"
+alias ivm="vim"
+alias vmi="vim"
+alias gti="git"
+
+alias s="sudo"
+
+alias up="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
