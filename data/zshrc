@@ -124,7 +124,7 @@ alias gc="git commit --message"
 # alias gst="git status --short"
 alias gtree="git log --graph --oneline --decorate"
 
-git config --global alias.vommit "commit --message"
+git config --global alias.vommit "commit"
 
 alias sl="ls"
 alias mk="make"
