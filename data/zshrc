@@ -135,6 +135,18 @@ alias ivm="vim"
 alias vmi="vim"
 alias gti="git"
 
+alias bringz="git pull"
+alias byes="exit"
+alias chicken="git add"
+alias donotwant="rm"
+alias dowant="cp"
+alias gimmeh="touch"
+alias gimme="touch"
+alias moar="more"
+alias nomnom="killall"
+alias rtfm="man"
+alias tldr="less"
+
 alias s="sudo"
 
 alias up="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
