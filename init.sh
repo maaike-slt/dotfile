@@ -2,7 +2,7 @@
 
 SYMLINK_ENV="symlink.env"
 SEPARATOR="="
-SAVE_PATH="$PWD/data/"
+SAVE_PATH="$(pwd)/data/"
 
 if [[ ! -f "$SYMLINK_ENV" ]]; then
 	printf "\033[1;31merror\033[0m:\t\033[1;35m%s\033[0m \033[31mnot found\033[0m\n" "$SYMLINK_ENV"
@@ -27,6 +27,8 @@ while IFS= read -r line; do
 		exit 1
 	fi
 
+	create="${create/#\~/$HOME}"
+
 	if [[ -L "$create" ]]; then
 		printf "\033[1;36info\033[0m:\tsymlink \033[1;35m%s\033[0m \033[1;36malready exists\033[0m\n" "$create"
 		continue
@@ -38,7 +40,7 @@ while IFS= read -r line; do
 		printf "\033[1;36minfo\033[0m:\tmoved \033[1;35m%s\033[0m to \033[1;35m%s.pre-dotfile\033[0m\n" "$create" "$create"
 	fi
 
-	ln -s "$SAVE_PATH$save" "$create"
+	ln -s "${SAVE_PATH}${save}" "$create"
 	printf "\033[1;36minfo\033[0m:\tcreated symlink \033[1;35m%s\033[0m -> \033[1;35m%s\033[0m\n" "$save" "$create"
 
 done <"$SYMLINK_ENV"
