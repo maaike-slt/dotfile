@@ -70,7 +70,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	autojump
+	colored-man-pages
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,15 +116,17 @@ export GIT_EDITOR="vim"
 export MAIL="msloot@student.42.fr"
 
 alias nor="norminette"
+alias norm="norminette"
 
 alias clangW="clang -Wall -Werror -Wextra"
 
 alias gc="git commit --message"
-alias gst="git status --short"
+# alias gst="git status --short"
 alias gtree="git log --graph --oneline --decorate"
 
+git config --global alias.vommit "commit --message"
+
 alias sl="ls"
-alias nj="just"
 alias mk="make"
 alias amke="make"
 alias mkae="make"
