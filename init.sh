@@ -10,8 +10,6 @@ if [[ ! -f "$SYMLINK_ENV" ]]; then
 fi
 
 while IFS= read -r line; do
-	printf "'%s'\n" "$line"
-
 	if [[ -z "$line" ]]; then
 		continue
 	fi
