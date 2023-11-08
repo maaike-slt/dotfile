@@ -209,7 +209,7 @@ option:
 	elif [[ $1 == "-s" || $1 == "--show" ]]; then
 		eval $CMD -print -exec rm -f {} +
 	else
-`		echo -e "unknown option:\t\033[1;33m$1\033[0m"
+		echo -e "unknown option:\t\033[1;33m$1\033[0m"
 		echo -e $HELP
 		return 1
 	fi
