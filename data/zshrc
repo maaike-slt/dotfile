@@ -121,7 +121,7 @@ alias norm="norminette"
 alias clangW="clang -Wall -Werror -Wextra"
 
 alias gc="git commit --message"
-# alias gst="git status --short"
+alias gst="git status --short"
 alias gtree="git log --graph --oneline --decorate"
 
 git config --global alias.vommit "commit"
