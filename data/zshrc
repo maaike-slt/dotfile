@@ -113,6 +113,8 @@ bindkey '^[[1;5D' backward-word
 
 export GIT_EDITOR="vim"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 export MAIL="msloot@student.42.fr"
 
 alias nor="norminette"
