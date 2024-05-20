@@ -30,7 +30,7 @@ while IFS= read -r line; do
 	create="${create/#\~/$HOME}"
 
 	if [[ -L "$create" ]]; then
-		printf "\033[1;36info\033[0m:\tsymlink \033[1;35m%s\033[0m \033[1;36malready exists\033[0m\n" "$create"
+		printf "\033[1;36minfo\033[0m:\tsymlink \033[1;35m%s\033[0m \033[1;36malready exists\033[0m\n" "$create"
 		continue
 	fi
 
